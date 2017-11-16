@@ -6,8 +6,19 @@ SPOCK_NUMBER = 1
 PAPER_NUMBER = 2
 LIZARD_NUMBER = 3
 SCISSORS_NUMBER = 4
-NAME_TO_NUMBER_DICT = {'rock': ROCK_NUMBER, 'Spock': SPOCK_NUMBER, 'paper': PAPER_NUMBER, 'lizard': LIZARD_NUMBER, 'scissors': SCISSORS_NUMBER}
-NUMBER_TO_NAME_DICT = {ROCK_NUMBER: 'rock', SPOCK_NUMBER: 'Spock', PAPER_NUMBER: 'paper', LIZARD_NUMBER: 'lizard', SCISSORS_NUMBER: 'scissors'}
+NAME_TO_NUMBER_DICT = {      \
+    'rock': ROCK_NUMBER,     \
+    'Spock': SPOCK_NUMBER,   \
+    'paper': PAPER_NUMBER,   \
+    'lizard': LIZARD_NUMBER, \
+    'scissors': SCISSORS_NUMBER
+}
+NUMBER_TO_NAME_DICT = {      \
+    ROCK_NUMBER: 'rock',     \
+    SPOCK_NUMBER: 'Spock',   \
+    PAPER_NUMBER: 'paper',   \
+    LIZARD_NUMBER: 'lizard', \
+    SCISSORS_NUMBER: 'scissors'}
 
 # -- Resolution matrix --
 # The player choice determines the row.
@@ -26,7 +37,7 @@ RESOLUTION_OUTCOME_MATRIX = \
      [PLAYER_WINS, TIE, COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS], \
      [PLAYER_WINS, PLAYER_WINS, TIE, COMPUTER_WINS, COMPUTER_WINS], \
      [COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS, TIE, COMPUTER_WINS], \
-     [COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS, TIE] \
+     [COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS, TIE]  \
     ]
 
 # Resolution descriptions
@@ -58,10 +69,10 @@ SCISSORS_SCISSORS = 'scissors-scissors'
 
 RESOLUTION_DESCRIPTION_MATRIX = \
     [ \
-     [ ROCK_ROCK, ROCK_SPOCK, ROCK_PAPER, ROCK_LIZARD, ROCK_SCISSORS], \
-     [ SPOCK_ROCK, SPOCK_SPOCK, SPOCK_PAPER, SPOCK_LIZARD, SPOCK_SCISSORS], \
-     [ PAPER_ROCK, PAPER_SPOCK, PAPER_PAPER, PAPER_LIZARD, PAPER_SCISSORS], \
-     [ LIZARD_ROCK, LIZARD_SPOCK, LIZARD_PAPER, LIZARD_LIZARD, LIZARD_SCISSORS], \
+     [ ROCK_ROCK, ROCK_SPOCK, ROCK_PAPER, ROCK_LIZARD, ROCK_SCISSORS],                    \
+     [ SPOCK_ROCK, SPOCK_SPOCK, SPOCK_PAPER, SPOCK_LIZARD, SPOCK_SCISSORS],               \
+     [ PAPER_ROCK, PAPER_SPOCK, PAPER_PAPER, PAPER_LIZARD, PAPER_SCISSORS],               \
+     [ LIZARD_ROCK, LIZARD_SPOCK, LIZARD_PAPER, LIZARD_LIZARD, LIZARD_SCISSORS],          \
      [ SCISSORS_ROCK, SCISSORS_SPOCK, SCISSORS_PAPER, SCISSORS_LIZARD, SCISSORS_SCISSORS] \
     ]
 
@@ -95,7 +106,7 @@ def rspls(player_choice):
     else:
         winner_description = 'tie!'
 
-    print(resolution_description + ', '+ winner_description)
+    print(resolution_description + ', ' + winner_description)
 
 if len(sys.argv) == 2:
     if  sys.argv[1] == 'test':
@@ -112,31 +123,31 @@ if len(sys.argv) == 2:
         print('3 is lizard:\t', number_to_name(3) == 'lizard')
         print('4 is scissors:\t', number_to_name(4) == 'scissors')
 
-        print('rock-rock, tie:\t\t\t' + str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][ROCK_NUMBER] == TIE))
-        print('rock-Spock, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][SPOCK_NUMBER] == COMPUTER_WINS))
-        print('rock-paper, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][PAPER_NUMBER] == COMPUTER_WINS))
-        print('rock-lizard, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][LIZARD_NUMBER] == PLAYER_WINS))
-        print('rock-scissors, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][SCISSORS_NUMBER] == PLAYER_WINS))
-        print('Spock-rock, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][ROCK_NUMBER] == PLAYER_WINS))
-        print('Spock-Spock, tie:\t\t' + str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][SPOCK_NUMBER] == TIE))
-        print('Spock-paper, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][PAPER_NUMBER] == COMPUTER_WINS))
-        print('Spock-lizard, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][LIZARD_NUMBER] == COMPUTER_WINS))
-        print('Spock-scissors, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][SCISSORS_NUMBER] == PLAYER_WINS))
-        print('paper-rock, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][ROCK_NUMBER] == PLAYER_WINS))
-        print('paper-Spock, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][SPOCK_NUMBER] == PLAYER_WINS))
-        print('paper-paper, tie:\t\t' + str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][PAPER_NUMBER] == TIE))
-        print('paper-lizard, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][LIZARD_NUMBER] == COMPUTER_WINS))
-        print('paper-scissors, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][SCISSORS_NUMBER] == COMPUTER_WINS))
-        print('lizard-rock, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][ROCK_NUMBER] == COMPUTER_WINS))
-        print('lizard-Spock, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][SPOCK_NUMBER] == PLAYER_WINS))
-        print('lizard-paper, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][PAPER_NUMBER] == PLAYER_WINS))
-        print('lizard-lizard, tie:\t\t' + str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][LIZARD_NUMBER] == TIE))
+        print('rock-rock, tie:\t\t\t' +             str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][ROCK_NUMBER] == TIE))
+        print('rock-Spock, computer wins:\t' +      str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][SPOCK_NUMBER] == COMPUTER_WINS))
+        print('rock-paper, computer wins:\t' +      str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][PAPER_NUMBER] == COMPUTER_WINS))
+        print('rock-lizard, player wins:\t' +       str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][LIZARD_NUMBER] == PLAYER_WINS))
+        print('rock-scissors, player wins:\t' +     str(RESOLUTION_OUTCOME_MATRIX[ROCK_NUMBER][SCISSORS_NUMBER] == PLAYER_WINS))
+        print('Spock-rock, player wins:\t' +        str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][ROCK_NUMBER] == PLAYER_WINS))
+        print('Spock-Spock, tie:\t\t' +             str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][SPOCK_NUMBER] == TIE))
+        print('Spock-paper, computer wins:\t' +     str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][PAPER_NUMBER] == COMPUTER_WINS))
+        print('Spock-lizard, computer wins:\t' +    str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][LIZARD_NUMBER] == COMPUTER_WINS))
+        print('Spock-scissors, player wins:\t' +    str(RESOLUTION_OUTCOME_MATRIX[SPOCK_NUMBER][SCISSORS_NUMBER] == PLAYER_WINS))
+        print('paper-rock, player wins:\t' +        str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][ROCK_NUMBER] == PLAYER_WINS))
+        print('paper-Spock, player wins:\t' +       str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][SPOCK_NUMBER] == PLAYER_WINS))
+        print('paper-paper, tie:\t\t' +             str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][PAPER_NUMBER] == TIE))
+        print('paper-lizard, computer wins:\t' +    str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][LIZARD_NUMBER] == COMPUTER_WINS))
+        print('paper-scissors, player wins:\t' +    str(RESOLUTION_OUTCOME_MATRIX[PAPER_NUMBER][SCISSORS_NUMBER] == COMPUTER_WINS))
+        print('lizard-rock, computer wins:\t' +     str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][ROCK_NUMBER] == COMPUTER_WINS))
+        print('lizard-Spock, player wins:\t' +      str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][SPOCK_NUMBER] == PLAYER_WINS))
+        print('lizard-paper, player wins:\t' +      str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][PAPER_NUMBER] == PLAYER_WINS))
+        print('lizard-lizard, tie:\t\t' +           str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][LIZARD_NUMBER] == TIE))
         print('lizard-scissors, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[LIZARD_NUMBER][SCISSORS_NUMBER] == COMPUTER_WINS))
-        print('scissors-rock, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][ROCK_NUMBER] == COMPUTER_WINS))
-        print('scissors-Spock, computer wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][SPOCK_NUMBER] == COMPUTER_WINS))
-        print('scissors-paper, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][PAPER_NUMBER] == PLAYER_WINS))
-        print('scissors-lizard, player wins:\t' + str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][LIZARD_NUMBER] == PLAYER_WINS))
-        print('scissors-scissors, tie:\t\t' + str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][SCISSORS_NUMBER] == TIE))
+        print('scissors-rock, computer wins:\t' +   str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][ROCK_NUMBER] == COMPUTER_WINS))
+        print('scissors-Spock, computer wins:\t' +  str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][SPOCK_NUMBER] == COMPUTER_WINS))
+        print('scissors-paper, player wins:\t' +    str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][PAPER_NUMBER] == PLAYER_WINS))
+        print('scissors-lizard, player wins:\t' +   str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][LIZARD_NUMBER] == PLAYER_WINS))
+        print('scissors-scissors, tie:\t\t' +       str(RESOLUTION_OUTCOME_MATRIX[SCISSORS_NUMBER][SCISSORS_NUMBER] == TIE))
     else:
         print('Invalid argument')
         sys.exit()
