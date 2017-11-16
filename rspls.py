@@ -18,7 +18,8 @@ NUMBER_TO_NAME_DICT = {      \
     SPOCK_NUMBER: 'Spock',   \
     PAPER_NUMBER: 'paper',   \
     LIZARD_NUMBER: 'lizard', \
-    SCISSORS_NUMBER: 'scissors'}
+    SCISSORS_NUMBER: 'scissors'
+}
 
 # -- Resolution matrix --
 # The player choice determines the row.
@@ -33,46 +34,46 @@ COMPUTER_WINS = 1
 TIE = 2
 RESOLUTION_OUTCOME_MATRIX = \
     [ \
-     [TIE, COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS], \
-     [PLAYER_WINS, TIE, COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS], \
-     [PLAYER_WINS, PLAYER_WINS, TIE, COMPUTER_WINS, COMPUTER_WINS], \
-     [COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS, TIE, COMPUTER_WINS], \
-     [COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS, PLAYER_WINS, TIE]  \
+     [TIE,           COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS,   PLAYER_WINS],   \
+     [PLAYER_WINS,   TIE,           COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS],   \
+     [PLAYER_WINS,   PLAYER_WINS,   TIE,           COMPUTER_WINS, COMPUTER_WINS], \
+     [COMPUTER_WINS, PLAYER_WINS,   PLAYER_WINS,   TIE,           COMPUTER_WINS], \
+     [COMPUTER_WINS, COMPUTER_WINS, PLAYER_WINS,   PLAYER_WINS,   TIE]            \
     ]
 
 # Resolution descriptions
-ROCK_ROCK = 'rock-rock'
-ROCK_SPOCK = 'Spock vaporizes rock'
-ROCK_PAPER = 'paper covers rock'
-ROCK_LIZARD = 'rock crushes lizard'
-ROCK_SCISSORS = 'rock crushes scissors'
-SPOCK_ROCK = ROCK_SPOCK
-SPOCK_SPOCK = 'Spock-Spock'
-SPOCK_PAPER = 'paper disproves Spock'
-SPOCK_LIZARD = 'lizard poisons Spock'
-SPOCK_SCISSORS = 'Spock smashes scissors'
-PAPER_ROCK = ROCK_PAPER
-PAPER_SPOCK = SPOCK_PAPER
-PAPER_PAPER = 'paper-paper'
-PAPER_LIZARD = 'lizard eats paper'
-PAPER_SCISSORS = 'scissors cuts paper'
-LIZARD_ROCK = ROCK_LIZARD
-LIZARD_SPOCK = SPOCK_LIZARD
-LIZARD_PAPER = PAPER_LIZARD
-LIZARD_LIZARD = 'lizard-lizard'
-LIZARD_SCISSORS = 'scissors decapitates lizard'
-SCISSORS_ROCK = ROCK_SCISSORS
-SCISSORS_SPOCK = SPOCK_SCISSORS
-SCISSORS_PAPER = PAPER_SCISSORS
-SCISSORS_LIZARD = LIZARD_SCISSORS
+ROCK_ROCK =         'rock-rock'
+ROCK_SPOCK =        'Spock vaporizes rock'
+ROCK_PAPER =        'paper covers rock'
+ROCK_LIZARD =       'rock crushes lizard'
+ROCK_SCISSORS =     'rock crushes scissors'
+SPOCK_ROCK =         ROCK_SPOCK
+SPOCK_SPOCK =       'Spock-Spock'
+SPOCK_PAPER =       'paper disproves Spock'
+SPOCK_LIZARD =      'lizard poisons Spock'
+SPOCK_SCISSORS =    'Spock smashes scissors'
+PAPER_ROCK =         ROCK_PAPER
+PAPER_SPOCK =        SPOCK_PAPER
+PAPER_PAPER =       'paper-paper'
+PAPER_LIZARD =      'lizard eats paper'
+PAPER_SCISSORS =    'scissors cuts paper'
+LIZARD_ROCK =        ROCK_LIZARD
+LIZARD_SPOCK =       SPOCK_LIZARD
+LIZARD_PAPER =       PAPER_LIZARD
+LIZARD_LIZARD =     'lizard-lizard'
+LIZARD_SCISSORS =   'scissors decapitates lizard'
+SCISSORS_ROCK =      ROCK_SCISSORS
+SCISSORS_SPOCK =     SPOCK_SCISSORS
+SCISSORS_PAPER =     PAPER_SCISSORS
+SCISSORS_LIZARD =    LIZARD_SCISSORS
 SCISSORS_SCISSORS = 'scissors-scissors'
 
 RESOLUTION_DESCRIPTION_MATRIX = \
     [ \
-     [ ROCK_ROCK, ROCK_SPOCK, ROCK_PAPER, ROCK_LIZARD, ROCK_SCISSORS],                    \
-     [ SPOCK_ROCK, SPOCK_SPOCK, SPOCK_PAPER, SPOCK_LIZARD, SPOCK_SCISSORS],               \
-     [ PAPER_ROCK, PAPER_SPOCK, PAPER_PAPER, PAPER_LIZARD, PAPER_SCISSORS],               \
-     [ LIZARD_ROCK, LIZARD_SPOCK, LIZARD_PAPER, LIZARD_LIZARD, LIZARD_SCISSORS],          \
+     [ ROCK_ROCK,     ROCK_SPOCK,     ROCK_PAPER,     ROCK_LIZARD,     ROCK_SCISSORS],    \
+     [ SPOCK_ROCK,    SPOCK_SPOCK,    SPOCK_PAPER,    SPOCK_LIZARD,    SPOCK_SCISSORS],   \
+     [ PAPER_ROCK,    PAPER_SPOCK,    PAPER_PAPER,    PAPER_LIZARD,    PAPER_SCISSORS],   \
+     [ LIZARD_ROCK,   LIZARD_SPOCK,   LIZARD_PAPER,   LIZARD_LIZARD,   LIZARD_SCISSORS],  \
      [ SCISSORS_ROCK, SCISSORS_SPOCK, SCISSORS_PAPER, SCISSORS_LIZARD, SCISSORS_SCISSORS] \
     ]
 
